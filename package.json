@@ -1,0 +1,37 @@
+{
+  "name": "@6thquake/react-properties",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "main": "src/index.js",
+  "files": [
+    "src/*"
+  ],
+  "keywords": "properties, env, json, webpack",
+  "description": "Loads multiple environments, and adds support for automatically reading configuration files for the three pre-defined environments: development, test, and production.",
+  "dependencies": {},
+  "scripts": {
+    "deploy": "npm publish --tag latest",
+    "test:test":"cross-env NODE_ENV=test node test/test.js",
+    "test:dev":"cross-env NODE_ENV=development node test/test.js",
+    "test":"cross-env NODE_ENV=production node test/test.js",
+    "lint": "eslint . --cache && echo \"eslint: no lint errors\"",
+    "prettier": "find . -name \"*.js\" -o -name \"*.d.ts\" -o -name \"*.tsx\" | grep -v -f .eslintignore | xargs prettier --write",
+    "spellcheck": "eslint . --config .eslintrc.spellcheck.js && echo \"eslint: no lint errors\""
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "eslint": "~4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-import-resolver-webpack": "^0.10.1",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-spellcheck": "^0.0.10",
+    "prettier": "^1.14.2"
+  },
+  "engines": {
+    "node": "^6.10.2 || ^8.9.4 || >=9.10.0"
+  }
+}

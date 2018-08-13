@@ -1,0 +1,9 @@
+/.git
+/.next
+/coverage
+/docs/export
+/flow
+/flow-typed
+/tmp
+build
+node_modules
